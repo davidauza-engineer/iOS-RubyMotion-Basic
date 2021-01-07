@@ -1,14 +1,19 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'Basic'
-    rootViewController.view.backgroundColor = UIColor.whiteColor
+    # Objective-C
+    # MyViewController *myVC = [[MyViewController alloc] initWithNibName:@"MyView" bundle: nil];
+    # [myVC isViewLoaded];
+    # [myVC setBackground:background];
 
-    navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
+    # RubyMotion
+    my_vc = MyViewController.alloc.initWithNibName('MyView', bundle: nil)
+    # my_vc.isViewLoaded?
+    # my_vc.background = background
+    dictionary = {}
+    puts dictionary.class.superclass
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
+    dictionary['key']
+    dictionary['key'] = 'value'
 
     true
   end
