@@ -6,7 +6,7 @@ class AppDelegate
     # [myVC setBackground:background];
 
     # RubyMotion
-    my_vc = MyViewController.alloc.initWithNibName('MyView', bundle: nil)
+    # my_vc = MyViewController.alloc.initWithNibName('MyView', bundle: nil)
     # my_vc.isViewLoaded?
     # my_vc.background = background
     dictionary = {}
@@ -14,6 +14,9 @@ class AppDelegate
 
     dictionary['key']
     dictionary['key'] = 'value'
+
+    frame = CGRect.new([100, 100], [100, 40])
+    puts frame.inspect
 
     true
   end
